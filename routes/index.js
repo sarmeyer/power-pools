@@ -26,18 +26,20 @@ router.post('/create', function(req, res, next) {
       var pointDiff1 = results.pointDiff += user1pts;
       return knex('team_game_stats').where('team_id', team1_id).update('pointDiff', pointDiff1).then(function() {
         return knex('team_game_stats').where('team_id', team1_id).select('pointsFor').first().then(function(dataF) {
+          console.log('*******DATAF*******');
+          console.log(dataF);
           var pointsFor1 = dataF.pointsFor += team1_score;
           return knex('team_game_stats').where('team_id', team1_id).update('pointsFor', pointsFor1).then(function() {
             return knex('team_game_stats').where('team_id', team1_id).select('pointsAgainst').first().then(function(dataA) {
               var pointsAgainst1 = dataA.pointsAgainst += team2_score;
-              return knex('team_game_stats').where('team_id', team1_id).update('pointsAgainst', pointsAgainst1).then(function() {
+              return knex('team_game_stats').where('team_id', team1_id).update('pointsAgainst', pointsAgainst1).then(function(){
                 return knex('team_game_stats').where('team_id', team2_id).select('pointDiff').first().then(function(results2) {
                   var pointDiff2 = results2.pointDiff += user2pts;
                   return knex('team_game_stats').where('team_id', team2_id).update('pointDiff', pointDiff2).then(function() {
-                    return knex('team_game_stats').where('team_id', team2_id).select('pointsFor').first().then(function(data2F) {
+                    return knex('team_game_stats').where('team_id', team2_id).select('pointsFor').first().then(function(data2F){
                       var pointsFor2 = data2F.pointsFor += team2_score;
-                      return knex('team_game_stats').where('team_id', team2_id).update('pointsFor', pointsFor2).then(function() {
-                        return knex('team_game_stats').where('team_id', team1_id).select('pointsAgainst').first().then(function(data2A) {
+                      return knex('team_game_stats').where('team_id', team2_id).update('pointsFor', pointsFor2).then(function(){
+                        return knex('team_game_stats').where('team_id', team2_id).select('pointsAgainst').first().then(function(data2A) {
                           var pointsAgainst2 = data2A.pointsAgainst += team1_score;
                           return knex('team_game_stats').where('team_id', team2_id).update('pointsAgainst', pointsAgainst2).then(function() {
                             return knex('team_game_stats').where('team_id', team1_id).then(function(team1_stats) {
