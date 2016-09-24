@@ -1,0 +1,26 @@
+extends layout
+
+block content
+	h1 Current Team Standings
+	div
+	table.table.table-hover.table-bordered 
+		thead
+			tr
+				th Team name
+				th Record (Wins:Losses)
+				th Point Differential
+				th Win Percentage
+				th Seed
+		tbody
+			each stat,index in stats
+				tr
+					td 
+						a(href='/teams/#{stat.id}') #{stat.teamName}
+					td #{stat.wins} : #{stat.losses}
+					td #{stat.pointDiff}
+					if stat.wins > 0
+						td #{(stat.wins/(stat.wins + stat.losses)*100).toFixed()}%
+					else
+						td 0%
+					td #{index+1}
+			a.btn.btn-primary(href="/" class='backBtn') Back

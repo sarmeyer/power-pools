@@ -1,0 +1,35 @@
+exports.seed = function(knex, Promise) {
+  return Promise.join(
+    knex('teams').del(),
+
+    knex('teams').insert({"teamName": "5280 Spike"}),
+    knex('teams').insert({"teamName": "Ben & Aaron’s 31 Flavors"}),
+    knex('teams').insert({"teamName": "Dream Team of 92’"}),
+    knex('teams').insert({"teamName": "Dude Where’s my Carr"}),
+    knex('teams').insert({"teamName": "Girth, Wind & Fire"}),
+    knex('teams').insert({"teamName": "If you can whack it, Jack It"}),
+    knex('teams').insert({"teamName": "Investment Spankers"}),
+    knex('teams').insert({"teamName": "Jephs"}),
+    knex('teams').insert({"teamName": "Lincoln Broskis"}),
+    knex('teams').insert({"teamName": "Lone Eagle"}),
+    knex('teams').insert({"teamName": "MDMN"}),
+    knex('teams').insert({"teamName": "Mewky Cocoa Puffs"}),
+    knex('teams').insert({"teamName": "Naughty Netboys"}),
+    knex('teams').insert({"teamName": "Peaches"}),
+    knex('teams').insert({"teamName": "The Forehands"}),
+    knex('teams').insert({"teamName": "Pueblo Dabbers"}),
+    knex('teams').insert({"teamName": "Pueblo’s Offseason Beauties"}),
+    knex('teams').insert({"teamName": "Saturday Night Mailers"}),
+    knex('teams').insert({"teamName": "Sets Machine"}),
+    knex('teams').insert({"teamName": "Southborough Spikes"}),
+    knex('teams').insert({"teamName": "Stoop Kids"}),
+    knex('teams').insert({"teamName": "Sweetridge Spikes"}),
+    knex('teams').insert({"teamName": "Three Tracks in the Sand"}),
+    knex('teams').insert({"teamName": "Top of the Bell Curve"}),
+    knex('teams').insert({"teamName": "Turtles all the Way Down"}),
+    knex('teams').insert({"teamName": "Unsafe Sets"}),
+    knex('teams').insert({"teamName": "We like Sportz"}),
+    knex('teams').insert({"teamName": "Young Blood"}),
+    knex('teams').insert({"teamName": "Your Name Here Sponsors"})
+  )
+};
