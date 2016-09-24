@@ -8,7 +8,7 @@ var getSeed = require('../lib/teamLogic');
 router.get('/', function(req, res, next) {
   return knex('teams').then(function(teams) {
     res.render('index', {
-      title: 'The 4th Annual Rocky Mountain Classic',
+      title: 'The 4th Annual Rocky Mountain Classic - Power Pool',
       teams: teams
     });
   })
