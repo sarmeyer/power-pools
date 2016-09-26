@@ -17,19 +17,6 @@ exports.seed = function(knex, Promise) {
     knex('team_game_stats').insert({team_id: "13", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"}),
     knex('team_game_stats').insert({team_id: "14", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"}),
     knex('team_game_stats').insert({team_id: "15", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"}),
-    knex('team_game_stats').insert({team_id: "16", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"}),
-    knex('team_game_stats').insert({team_id: "17", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"}),
-    knex('team_game_stats').insert({team_id: "18", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"}),
-    knex('team_game_stats').insert({team_id: "19", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"}),
-    knex('team_game_stats').insert({team_id: "20", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"}),
-    knex('team_game_stats').insert({team_id: "21", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"}),
-    knex('team_game_stats').insert({team_id: "22", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"}),
-    knex('team_game_stats').insert({team_id: "23", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"}),
-    knex('team_game_stats').insert({team_id: "24", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"}),
-    knex('team_game_stats').insert({team_id: "25", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"}),
-    knex('team_game_stats').insert({team_id: "26", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"}),
-    knex('team_game_stats').insert({team_id: "27", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"}),
-    knex('team_game_stats').insert({team_id: "28", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"}),
-    knex('team_game_stats').insert({team_id: "29", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"})
+    knex('team_game_stats').insert({team_id: "16", wins: "0", losses: "0", "pointDiff": "0", "pointsFor": "0", "pointsAgainst": "0", seed: "0"})
   )
 };
